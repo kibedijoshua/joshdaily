@@ -1,8 +1,12 @@
 from django.urls import path    
-from .import views
+from . import views
 
 urlpatterns = [
     path("notes", views.notes, name="notes"),
-    path("notes/<slug:slug>", views.note_detail, name="note-detail")
+    path("notes/<slug:slug>/", views.note_detail, name="note-detail")
     
 ]
+
+# endpoints
+# GET_ALL_NOTES_and_CREATE_NEW_NOTE = "http://127.0.0.1:8000/notes"
+# GET_SPECIFIC_NOTE = "http://127.0.0.1:8000/notes/note-slug/"
